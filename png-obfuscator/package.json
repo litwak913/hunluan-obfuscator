@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/obfuscator.ts",
   "scripts": {
-    "deobfuscator":"tsc && node dist/deobfuscator.js",
+    "deobfuscator-img":"tsc && node dist/deobfuscator-img.js",
     "deobfuscator-file":"tsc && node dist/deobfuscator-file.js",
-    "obfuscator":"tsc && node dist/obfuscator.js",
+    "obfuscator-img":"tsc && node dist/obfuscator-img.js",
     "obfuscator-file":"tsc && node dist/obfuscator-file.js"
   },
   "author": "",
