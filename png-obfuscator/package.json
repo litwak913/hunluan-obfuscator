@@ -2,7 +2,7 @@
   "name": "gmclt-analytics",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "src/obfuscator.ts",
   "scripts": {
     "run":"tsc && node dist/index.js",
     "run-undo":"tsc && node dist/undo.js"
