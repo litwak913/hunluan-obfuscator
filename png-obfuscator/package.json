@@ -5,7 +5,9 @@
   "main": "src/obfuscator.ts",
   "scripts": {
     "deobfuscator":"tsc && node dist/deobfuscator.js",
-    "obfuscator":"tsc && node dist/obfuscator.js"
+    "deobfuscator-file":"tsc && node dist/deobfuscator-file.js",
+    "obfuscator":"tsc && node dist/obfuscator.js",
+    "obfuscator-file":"tsc && node dist/obfuscator-file.js"
   },
   "author": "",
   "license": "ISC",
