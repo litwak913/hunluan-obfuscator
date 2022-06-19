@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/obfuscator.ts",
   "scripts": {
-    "run":"tsc && node dist/index.js",
-    "run-undo":"tsc && node dist/undo.js"
+    "deobfuscator":"tsc && node dist/deobfuscator.js",
+    "obfuscator":"tsc && node dist/obfuscator.js"
   },
   "author": "",
   "license": "ISC",
