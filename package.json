@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pngjs": "^6.0.0",
-    "typescript": "^4.7.4"
+    "pngjs": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@types/pngjs": "^6.0.1"
+    "@types/pngjs": "^6.0.1",
+    "typescript": "^4.7.4"
   }
 }
