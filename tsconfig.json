@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es6",
     "module": "esnext",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "esModuleInterop": true
   },
   "include": [
-    "./**/*.ts"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
