@@ -8,8 +8,8 @@
     "deobfuscator-file": "tsc && node dist/deobfuscator-file.js",
     "obfuscator-img": "tsc && node dist/obfuscator-img.js",
     "obfuscator-file": "tsc && node dist/obfuscator-file.js",
-    "build-cli": "rollup -c rollup.config.cli.js",
-    "run-cli": "node dist/cli.js"
+    "build": "tsc",
+    "run": "tsc && node dist/cli.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,14 +19,9 @@
     "pngjs": "^6.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.3",
     "@types/inquirer": "^8.2.1",
     "@types/node": "^18.0.0",
     "@types/pngjs": "^6.0.1",
-    "rollup": "^2.75.7",
     "typescript": "^4.7.4"
   }
 }
