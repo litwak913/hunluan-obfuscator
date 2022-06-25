@@ -1,5 +1,4 @@
 import i18next from "i18next" 
-const i=i18next
 import inquirer from "inquirer"
 import I18nextCLILanguageDetector from "i18next-cli-language-detector"
 import zh from "./locale/zh.json" assert {type: "json"}
@@ -7,7 +6,7 @@ import en from "./locale/en.json" assert {type: "json"}
 import { obfuscatorImg,deobfuscatorImg } from "./img.js"
 import { existsSync } from "fs"
 import { deobfuscatorFile, obfuscatorFile } from "./file.js"
-i.use(I18nextCLILanguageDetector).init({
+i18next.use(I18nextCLILanguageDetector).init({
     fallbackLng: "en",
     resources: {
         "en": {
@@ -19,35 +18,35 @@ i.use(I18nextCLILanguageDetector).init({
 
     }
 })
-console.log(i.t("cwd")+process.cwd())
-console.log(i.t("hint"))
+console.log(i18next.t("cwd")+process.cwd())
+console.log(i18next.t("hint"))
 const answer = await inquirer.prompt([
     {
         name:"inputpath",
         type:"input",
-        message:i.t("input_path"),
+        message:i18next.t("input_path"),
         validate(v){
-            return existsSync(v) ? true : i.t("path_error")
+            return existsSync(v) ? true : i18next.t("path_error")
         }
     },
     {
         name:"mode",
         type:"list",
-        message:i.t("mode"),
+        message:i18next.t("mode"),
         choices:[
-            {name:i.t("obfuscator"),value:"obfuscator"},
-            {name:i.t("deobfuscator"),value:"deobfuscator"}
+            {name:i18next.t("obfuscator"),value:"obfuscator"},
+            {name:i18next.t("deobfuscator"),value:"deobfuscator"}
         ],
         default:0
     },
     {
         name:"type",
         type:"list",
-        message:i.t("type"),
+        message:i18next.t("type"),
         default:0,
         choices:[
-            {name:i.t("type_img"),value:"img"},
-            {name:i.t("type_file"),value:"file"}
+            {name:i18next.t("type_img"),value:"img"},
+            {name:i18next.t("type_file"),value:"file"}
         ]
     }
 ]);
@@ -55,29 +54,29 @@ const args=await inquirer.prompt([
     {
         name:"width",
         type:"number",
-        message:i.t("img_width"),
+        message:i18next.t("img_width"),
         when(){
             return answer.type==="img" && answer.mode=="deobfuscator"
         },
         validate(v){
-            return isNaN(v) ? i.t("num_error") : true
+            return isNaN(v) ? i18next.t("num_error") : true
         }
     },
     {
         name:"height",
         type:"number",
-        message:i.t("img_height"),
+        message:i18next.t("img_height"),
         when(){
             return answer.type=="img" && answer.mode=="deobfuscator"
         },
         validate(v){
-            return isNaN(v) ? i.t("num_error") : true
+            return isNaN(v) ? i18next.t("num_error") : true
         }
     },
     {
         name:"outputpath",
         type:"input",
-        message:i.t("output_path")
+        message:i18next.t("output_path")
     }
 ])
 if(answer.type=="img"){
