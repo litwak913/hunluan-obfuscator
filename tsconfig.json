@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES2017",
     "module": "esnext",
     "strict": true,
     "outDir": "dist",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true
   },
   "include": [
