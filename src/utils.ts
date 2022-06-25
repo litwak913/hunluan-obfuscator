@@ -1,4 +1,4 @@
-function forImage(height:number,width:number,callback:(idx:number,imgidx:number) => void){
+export function forImage(height:number,width:number,callback:(idx:number,imgidx:number) => void){
     for (var y = 0; y < height; y++) {
         for (var x = 0; x < width; x++) {
             var idx=(width*y+x)

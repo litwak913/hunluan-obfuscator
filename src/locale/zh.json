@@ -9,5 +9,8 @@
     "img_width":"输入原图宽度",
     "type_img":"图片（PNG格式）",
     "type_file":"文件",
-    "output_path":"输出文件路径"
+    "output_path":"输出文件路径",
+    "cwd":"当前目录：",
+    "path_error":"无效路径",
+    "num_error":"无效数字"
 }
