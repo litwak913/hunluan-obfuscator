@@ -51,7 +51,6 @@ const answer = await inquirer.prompt([
         ]
     }
 ]);
-console.log(answer)
 const args=await inquirer.prompt([
     {
         name:"width",
@@ -81,7 +80,6 @@ const args=await inquirer.prompt([
         message:i.t("output_path")
     }
 ])
-console.log(args)
 if(answer.type=="img"){
     if(answer.mode=="obfuscator"){
         obfuscatorImg(answer.inputpath,args.outputpath)
