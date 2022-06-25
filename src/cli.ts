@@ -6,6 +6,7 @@ import zh from "./locale/zh.json" assert {type: "json"}
 import en from "./locale/en.json" assert {type: "json"}
 import { obfuscatorImg,deobfuscatorImg } from "./img.js"
 import { existsSync } from "fs"
+import { deobfuscatorFile, obfuscatorFile } from "./file.js"
 i.use(I18nextCLILanguageDetector).init({
     fallbackLng: "en",
     resources: {
@@ -89,8 +90,8 @@ if(answer.type=="img"){
     }
 } else if(answer.type=="file"){
     if(answer.mode=="obfuscator"){
-        console.log("STUB")
+        obfuscatorFile(answer.inputpath,args.outputpath)
     } else if(answer.mode=="deobfuscator"){
-        console.log("STUB")
+        deobfuscatorFile(answer.inputpath,args.outputpath)
     }
 }
