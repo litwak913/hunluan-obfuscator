@@ -45,3 +45,23 @@ const answer = await inquirer.prompt([
     }
 ]);
 console.log(answer)
+const args=await inquirer.prompt([
+    {
+        name:"height",
+        type:"number",
+        message:i.t("img_height"),
+        when:() => {return answer.type=="img"}
+    },
+    {
+        name:"width",
+        type:"number",
+        message:i.t("img_width"),
+        when:() => {return answer.type=="img"}
+    },
+    {
+        name:"output_path",
+        type:"input",
+        message:i.t("output_path")
+    }
+])
+console.log(args)
